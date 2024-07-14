@@ -1,0 +1,24 @@
+# setup credentials git
+git config --global user.name 'avnexcode'
+git config --global user.email 'axnvee18@gmail.com'
+echo -e "protocol=https\nhost=github.com\nusername=avnexcode\npassword=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" | git credential approve
+
+# setup postgres
+ALTER USER postgres PASSWORD 'axnvee188216';
+sudo nano /var/lib/pgsql/16/data/pg_hba.conf
+
+# setup mysql
+sudo dnf install mysql-server
+sudo systemctl start mysqld
+sudo systemctl enable mysqld
+sudo mysql_secure_installation
+
+SELECT user, host, plugin FROM mysql.user WHERE user = 'axnvee';
+
+RENAME USER 'root'@'localhost' TO 'axnvee'@'localhost';
+FLUSH PRIVILEGES;
+ALTER USER 'axnvee'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'axnvee188216';
+
+
+# setup laravel
+sudo dnf install php-pgsql php-sqlitea3 php-mysqlnd
