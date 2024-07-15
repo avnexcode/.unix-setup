@@ -1,6 +1,7 @@
 # setup credentials git
 git config --global user.name 'avnexcode'
 git config --global user.email 'axnvee18@gmail.com'
+git config --global credential.helper store
 echo -e "protocol=https\nhost=github.com\nusername=avnexcode\npassword=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" | git credential approve
 
 # setup postgres
@@ -22,3 +23,5 @@ ALTER USER 'axnvee'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'axnvee
 
 # setup laravel
 sudo dnf install php-pgsql php-sqlitea3 php-mysqlnd
+
+sudo dnf install php-bcmath php-gd php-zipy
