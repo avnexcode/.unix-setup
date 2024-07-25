@@ -18,38 +18,18 @@ SELECT user, host, plugin FROM mysql.user WHERE user = 'axnvee';
 
 RENAME USER 'root'@'localhost' TO 'axnvee'@'localhost';
 FLUSH PRIVILEGES;
+
 ALTER USER 'axnvee'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'axnvee188216';
 
-
 # setup laravel
-sudo dnf install php-pgsql php-sqlite3 php-mysqlnd
+sudo dnf install php-pgsql php-sqlite3 php-mysqlnd php-bcmath php-gd php-zip
 
-sudo dnf install php-bcmath php-gd php-zip
+# setup ui
+sudo dnf install figlet lolcat boxes ruby
 
 # setup folder
 mkdir Axnvee
-z Axnvee
+cd Axnvee
 mkdir Code
-z Code
+cd Code
 mkdir Java JavaScript C PHP Laravel Reactjs Nextjs Nodejs Nestjs Golang Python
-z Java
-z Code
-z JavaScript
-z Code
-z C
-z Code
-z PHP
-z Code
-z Laravel
-z Code
-z Reactjs
-z Code
-z Nextjs
-z Code
-z Nodejs
-z Code
-z Nestjs
-z Code
-z Golang
-z Code
-z Python
