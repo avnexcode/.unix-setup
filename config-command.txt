@@ -22,6 +22,34 @@ ALTER USER 'axnvee'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'axnvee
 
 
 # setup laravel
-sudo dnf install php-pgsql php-sqlitea3 php-mysqlnd
+sudo dnf install php-pgsql php-sqlite3 php-mysqlnd
 
-sudo dnf install php-bcmath php-gd php-zipy
+sudo dnf install php-bcmath php-gd php-zip
+
+# setup folder
+mkdir Axnvee
+z Axnvee
+mkdir Code
+z Code
+mkdir Java JavaScript C PHP Laravel Reactjs Nextjs Nodejs Nestjs Golang Python
+z Java
+z Code
+z JavaScript
+z Code
+z C
+z Code
+z PHP
+z Code
+z Laravel
+z Code
+z Reactjs
+z Code
+z Nextjs
+z Code
+z Nodejs
+z Code
+z Nestjs
+z Code
+z Golang
+z Code
+z Python
