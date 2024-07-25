@@ -28,7 +28,7 @@ unset rc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Oh My Posh
-eval "$(oh-my-posh init bash --config /home/axnvee/.poshthemes/axnvee.omp.json)"
+eval "$(oh-my-posh init bash --config /home/axnvee/.poshthemes/1_axnvee.omp.json)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
