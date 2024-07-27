@@ -5,8 +5,19 @@ function ReactViteTs {
     pnpm create vite $name --template react-ts
     cd $name
     pnpm install
-    pnpm add -D tailwindcss postcss autoprefixer
+    pnpm add -D tailwindcss postcss autoprefixer axios @tanstack/react-query formik react-router-dom @types/react-router-dom
+    pnpm add react-icons --save
     npx tailwindcss init -p
+
+    # Buat Struktur Folder
+    mkdir src/components
+    mkdir src/components/elements
+    mkdir src/components/fragments
+    mkdir src/components/layouts
+    mkdir src/libs
+    mkdir src/features
+    mkdir src/types
+    mkdir src/pages
 
     # Remove App.css file in src folder
     rm src/App.css
@@ -61,8 +72,19 @@ function ReactViteJs {
     pnpm create vite $name --template react
     cd $name
     pnpm install
-    pnpm add -D tailwindcss postcss autoprefixer
+    pnpm add -D tailwindcss postcss autoprefixer axios @tanstack/react-query formik react-router-dom
+    pnpm add react-icons --save
     npx tailwindcss init -p
+
+    # Buat Struktur Folder
+    mkdir src/components
+    mkdir src/components/elements
+    mkdir src/components/fragments
+    mkdir src/components/layouts
+    mkdir src/libs
+    mkdir src/features
+    mkdir src/types
+    mkdir src/pages
 
     # Remove App.css file in src folder
     rm src/App.css
