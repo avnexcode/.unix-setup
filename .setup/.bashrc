@@ -46,8 +46,8 @@ figlet -c -w $(tput cols) -f big "Let's  Code  Axnvee" | boxes -d dog -a hc | lo
 
 ### import external module
 ## Config
-source ~/.unix-setup/.config/.zoxide.sh
-source ~/.unix-setup/.config/.oh-my-posh.sh
+source ~/.unix-setup/.configs/.zoxide.sh
+source ~/.unix-setup/.configs/.oh-my-posh.sh
 
 ## Commands
 source ~/.unix-setup/.commands/.git-aliases.sh
