@@ -38,8 +38,9 @@ alias gcln='git clean -df'
 
 # Others
 
-function gfp {
+gfp() {
+    local message="${1:-message: update}"
     git add .
-    git commit -am "message: update"
+    git commit -am "$message"
     git push -u origin main
 }
