@@ -35,3 +35,11 @@ alias gpr='git pull --rebase'
 alias gundo='git reset --soft HEAD^'
 alias grs='git reset --hard HEAD'
 alias gcln='git clean -df'
+
+# Others
+
+function gfp {
+    git add .
+    git commit -am "message: update"
+    git push -u origin main
+}
