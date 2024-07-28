@@ -1,29 +1,33 @@
 # React Vite Typescript Function Builder
-function ReactViteTs {
-    name=$1
+function ReactViteTs() {
+    local project_name
 
-    pnpm create vite $name --template react-ts
-    cd $name
+    if [ -z "$1" ]; then
+        read -p "Please enter the project name: " project_name
+    else
+        project_name="$1"
+    fi
+
+    if [ -z "$project_name" ]; then
+        echo "Project name cannot be empty."
+        return 1
+    fi
+
+    pnpm create vite "$project_name" --template react-ts
+    
+    cd "$project_name" || exit
+    
     pnpm install
-    pnpm add -D tailwindcss postcss autoprefixer axios @tanstack/react-query formik react-router-dom @types/react-router-dom
-    pnpm add react-icons --save
+    pnpm add -D tailwindcss postcss autoprefixer
+    pnpm add axios @tanstack/react-query formik react-router-dom @types/react-router-dom react-icons
+
     npx tailwindcss init -p
 
-    # Buat Struktur Folder
-    mkdir src/components
-    mkdir src/components/elements
-    mkdir src/components/fragments
-    mkdir src/components/layouts
-    mkdir src/libs
-    mkdir src/features
-    mkdir src/types
-    mkdir src/pages
+    mkdir -p src/components/elements src/components/fragments src/components/layouts src/libs src/features src/types src/pages
 
-    # Remove App.css file in src folder
     rm src/App.css
 
-    # Update content of App.tsx
-    appTsxContent='
+    cat > src/App.tsx <<EOF
 export default function App() {
     return (
         <div className="bg-blue-500 text-white p-4 w-full h-screen flex justify-center items-center flex-col gap-5">
@@ -33,11 +37,9 @@ export default function App() {
         </div>
     );
 }
-'
-    echo "$appTsxContent" > src/App.tsx
+EOF
 
-    # Update tailwind.config.js
-    tailwindConfigContent='
+    cat > tailwind.config.js <<EOF
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -49,48 +51,49 @@ export default {
   },
   plugins: [],
 }
-'
-    echo "$tailwindConfigContent" > tailwind.config.js
+EOF
 
-    # Update content of index.css in src folder
-    indexCssContent='
+    cat > src/index.css <<EOF
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-'
-    echo "$indexCssContent" > src/index.css
+EOF
 
     code .
-    pnpm run dev & xdg-open "http://localhost:5173"
+    xdg-open "http://localhost:5173" 2>/dev/null || open "http://localhost:5173"
+    pnpm run dev
 }
 
-
 # React Vite Javascript Function Builder
-function ReactViteJs {
-    name=$1
+function ReactViteJs() {
+    local project_name
 
-    pnpm create vite $name --template react
-    cd $name
+    if [ -z "$1" ]; then
+        read -p "Please enter the project name: " project_name
+    else
+        project_name="$1"
+    fi
+
+    if [ -z "$project_name" ]; then
+        echo "Project name cannot be empty."
+        return 1
+    fi
+
+    pnpm create vite "$project_name" --template react
+    
+    cd "$project_name" || exit
+    
     pnpm install
-    pnpm add -D tailwindcss postcss autoprefixer axios @tanstack/react-query formik react-router-dom
-    pnpm add react-icons --save
+    pnpm add -D tailwindcss postcss autoprefixer
+    pnpm add axios @tanstack/react-query formik react-router-dom react-icons
+
     npx tailwindcss init -p
 
-    # Buat Struktur Folder
-    mkdir src/components
-    mkdir src/components/elements
-    mkdir src/components/fragments
-    mkdir src/components/layouts
-    mkdir src/libs
-    mkdir src/features
-    mkdir src/types
-    mkdir src/pages
+    mkdir -p src/components/elements src/components/fragments src/components/layouts src/libs src/features src/types src/pages
 
-    # Remove App.css file in src folder
     rm src/App.css
 
-    # Update content of App.jsx
-    appJsxContent='
+    cat > src/App.jsx <<EOF
 export default function App() {
     return (
         <div className="bg-blue-500 text-white p-4 w-full h-screen flex justify-center items-center flex-col gap-5">
@@ -100,33 +103,29 @@ export default function App() {
         </div>
     );
 }
-'
-    echo "$appJsxContent" > src/App.jsx
+EOF
 
-    # Update tailwind.config.js
-    tailwindConfigContent='
+    cat > tailwind.config.js <<EOF
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-'
-    echo "$tailwindConfigContent" > tailwind.config.js
-
-    # Update content of index.css in src folder
-    indexCssContent='
+EOF
+    # Mengubah konten index.css pada folder src
+    cat > src/index.css <<EOF
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-'
-    echo "$indexCssContent" > src/index.css
+EOF
 
     code .
-    pnpm run dev & xdg-open "http://localhost:5173"
+    xdg-open "http://localhost:5173" 2>/dev/null || open "http://localhost:5173"
+    pnpm run dev
 }

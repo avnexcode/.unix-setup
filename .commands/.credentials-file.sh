@@ -1,6 +1,3 @@
-#!/bin/bash
-
-# Function to check credentials and open directories
 credentials() {
     local username="$1"
     local password="$2"
@@ -17,7 +14,7 @@ credentials() {
             "secret")
                 echo -e "\e[32mAccess granted\e[0m"
                 for ((i = 1; i <= count; i++)); do
-                    xdg-open "G:/Axnvee/Pictures/Screenshots/Something You Can't Open It/code-avnexeed/02"
+                    xdg-open "/home/axnvee/Axnvee/Code"
                 done
                 ;;
             "movie")
@@ -47,8 +44,9 @@ located() {
     echo
     read -sp "password: " password
     echo
-    read -p "location: " location
-    read -p "count: " count
+    read -sp "location: " location
+    echo
+    read -sp "count: " count
 
     # Call credentials function with user input
     credentials "$username" "$password" "$location" "$count"
