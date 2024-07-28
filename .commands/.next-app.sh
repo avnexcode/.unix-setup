@@ -40,7 +40,7 @@ EOF
 EOF
 
     code .
-    xdg-open "http://localhost:5173" 2>/dev/null || open "http://localhost:5173"
+    xdg-open "http://localhost:3000" 2>/dev/null || open "http://localhost:3000"
     pnpm run dev
 }
 
@@ -86,6 +86,6 @@ EOF
 EOF
 
     code .
-    xdg-open "http://localhost:5173" 2>/dev/null || open "http://localhost:5173"
+    xdg-open "http://localhost:3000" 2>/dev/null || open "http://localhost:3000"
     pnpm run dev
 }
