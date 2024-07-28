@@ -23,7 +23,7 @@ function ReactViteJs() {
 
     npx tailwindcss init -p
 
-    mkdir -p src/components/elements src/components/fragments src/components/layouts src/libs src/features src/features/product src/features/user src/pages public/assets/images public/assets/videos public/assets/audios
+    mkdir -p src/components/elements src/components/fragments src/components/layouts src/libs src/libs/axios src/features src/features/product src/features/user src/pages public/assets/images public/assets/videos public/assets/audios
 
     rm src/App.css
 
@@ -89,7 +89,7 @@ function ReactViteTs() {
 
     npx tailwindcss init -p
 
-    mkdir -p src/components/elements src/components/fragments src/components/layouts src/libs src/features src/features/product src/features/user src/types src/pages public/assets/images public/assets/videos public/assets/audios
+    mkdir -p src/components/elements src/components/fragments src/components/layouts src/libs src/libs/axios src/features src/features/product src/features/user src/types src/pages public/assets/images public/assets/videos public/assets/audios
 
     rm src/App.css
 
