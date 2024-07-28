@@ -1,10 +1,50 @@
-Title :
-Next Page Router Builder Command (Bash)
-Next App Router Builder Command (Bash)
+### Title :
+
 React Vite Router Builder Command (Bash)
 
+### Description :
 
-Description :
+***The easiest way to build an application with React Vite.***
+
+**Installed Dependencies**
+```
+•TailwindCSS
+•PostCSS
+•Autoprefixer
+•React Router DOM
+•Axios
+•Tanstack React Query
+•Formik
+•React Icons
+```
+
+
+### Title :
+
+Next Page Router Builder Command (Bash)
+
+### Description :
+
+***The easiest way to build an application with React Vite.***
+
+**Installed Dependencies**
+```
+•TailwindCSS
+•PostCSS
+•Autoprefixer
+•Axios
+•Tanstack React Query
+•Formik
+•React Icons
+```
+
+
+### Title :
+
+Next App Router Builder Command (Bash)
+
+### Description :
+
 ***The easiest way to build an application with React Vite.***
 
 **Installed Dependencies**

@@ -39,11 +39,16 @@ source ~/.unix-setup/.configs/.zoxide.sh
 source ~/.unix-setup/.configs/.oh-my-posh.sh
 
 ## Commands
-source ~/.unix-setup/.commands/.git-aliases.sh
+# Builders
+source ~/.unix-setup/.configs/.auto-run.sh
 source ~/.unix-setup/.commands/.next-app.sh
 source ~/.unix-setup/.commands/.next-page.sh
 source ~/.unix-setup/.commands/.vite-react.sh
 source ~/.unix-setup/.commands/.native-php.sh
 source ~/.unix-setup/.commands/.native-javascript.sh
-source ~/.unix-setup/.commands/.credentials-file.sh
-source ~/.unix-setup/.commands/.auto-run.sh
+
+# Aliases
+source ~/.unix-setup/.commands/.git-aliases.sh
+
+# Others
+source ~/.unix-setup/.secret/.credentials-file.sh
