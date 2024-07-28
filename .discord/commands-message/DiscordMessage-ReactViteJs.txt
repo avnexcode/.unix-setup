@@ -1,0 +1,12 @@
+***# Bash Command For Javascript Version***
+```
+
+```
+**Example Usage**
+```
+ReactViteJs
+```
+**OR**
+```
+ReactViteJs app-name
+```

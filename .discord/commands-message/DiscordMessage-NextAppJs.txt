@@ -1,0 +1,12 @@
+***# Bash Command For Javascript Version***
+```
+
+```
+**Example Usage**
+```
+NextAppJs
+```
+**OR**
+```
+NextAppJs app-name
+```

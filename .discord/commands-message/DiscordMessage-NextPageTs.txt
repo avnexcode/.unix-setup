@@ -1,0 +1,12 @@
+***# Bash Command For Typescript Version***
+```
+
+```
+**Example Usage**
+```
+NextPageTs
+```
+**OR**
+```
+NextPageTs app-name
+```
