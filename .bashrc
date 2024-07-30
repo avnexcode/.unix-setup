@@ -49,6 +49,7 @@ source ~/.unix-setup/.commands/.native-javascript.sh
 
 # Aliases
 source ~/.unix-setup/.commands/.git-aliases.sh
+source ~/.unix-setup/.commands/.global-aliases.sh
 
 # Others
 source ~/.unix-setup/.secret/.credentials-file.sh

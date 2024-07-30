@@ -1,4 +1,4 @@
-Already Installed:
+Prerequisite:
 • Oh My Pohs
 • Zoxide
 • Fzf
