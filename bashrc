@@ -35,21 +35,21 @@ PATH=~/.console-ninja/.bin:$PATH
 
 ### import external module
 ## Config
-source ~/.unix-setup/.configs/.zoxide.sh
-source ~/.unix-setup/.configs/.oh-my-posh.sh
+source ~/.unix-setup/configs/zoxide.sh
+source ~/.unix-setup/configs/oh-my-posh.sh
 
 ## Commands
 # Builders
-source ~/.unix-setup/.configs/.auto-run.sh
-source ~/.unix-setup/.commands/.next-app.sh
-source ~/.unix-setup/.commands/.next-page.sh
-source ~/.unix-setup/.commands/.vite-react.sh
-source ~/.unix-setup/.commands/.native-php.sh
-source ~/.unix-setup/.commands/.native-javascript.sh
+source ~/.unix-setup/configs/auto-run.sh
+source ~/.unix-setup/commands/next-app.sh
+source ~/.unix-setup/commands/next-page.sh
+source ~/.unix-setup/commands/vite-react.sh
+source ~/.unix-setup/commands/native-php.sh
+source ~/.unix-setup/commands/native-javascript.sh
 
 # Aliases
-source ~/.unix-setup/.commands/.git-aliases.sh
-source ~/.unix-setup/.commands/.global-aliases.sh
+source ~/.unix-setup/commands/git-aliases.sh
+source ~/.unix-setup/commands/global-aliases.sh
 
 # Others
-source ~/.unix-setup/.secret/.credentials-file.sh
+source ~/.unix-setup/secret/credentials-file.sh
