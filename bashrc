@@ -37,6 +37,7 @@ PATH=~/.console-ninja/.bin:$PATH
 ## Config
 source ~/.unix-setup/configs/zoxide.sh
 source ~/.unix-setup/configs/oh-my-posh.sh
+source ~/.unix-setup/configs/colorls.sh
 
 ## Commands
 # Builders
